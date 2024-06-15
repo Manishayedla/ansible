@@ -1,0 +1,11 @@
+- name: variables
+  hosts: localhost
+  vars: #variable declaration #not only declaration we will also have to access the variable
+    Course: "Ansible" #defing a value
+    Name: "Manisha"
+    Duration: "120hrs"
+  tasks:
+  - name: print  information
+    ansible.builtin.debug:
+      msg: "Hi, My name is {{Name}}. I'm learning {{Course}}, Duration is {{Duration}}"  #{{}} to assign variable in ansible
+      #now, we are trying to keep manisha,ansible,120hrs in a variable here
