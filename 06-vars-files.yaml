@@ -1,0 +1,12 @@
+#sometimes in project there might be 30-40 variables to declare. if we declare in the code itself it will be long and multiple steps and confusing
+#instead here what we can do
+- name: variables from files
+  hosts: localhost
+  vars_files:
+  -vars.yaml
+  tasks:
+   - name: print override information #prints the info that over ridden
+    vars: #Task level variable #inheritance and overriding 
+      Course: "DevOps"
+    ansible.builtin.debug:
+      msg: "Hi, My name is {{Name}}. I'm learning {{Course}}, Duration is {{Duration}}"  #{{}} to assign variable in ansible

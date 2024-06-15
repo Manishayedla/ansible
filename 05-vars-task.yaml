@@ -9,7 +9,6 @@
   - name: print override information #prints the info that over ridden
     vars: #Task level variable #inheritance and overriding 
       Course: "DevOps" 
-
     ansible.builtin.debug:
       msg: "Hi, My name is {{Name}}. I'm learning {{Course}}, Duration is {{Duration}}"  #{{}} to assign variable in ansible
       #now, we are trying to keep manisha,ansible,120hrs in a variable here
