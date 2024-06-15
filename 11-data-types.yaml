@@ -1,7 +1,7 @@
 #int,float,double,arraylist,map,boolean
 
 - name: data type
-  hosts: local host
+  hosts: localhost
   vars:
     Course: Devops with AWS #string
     Tools: #if it start with hi-fun its list
