@@ -1,0 +1,22 @@
+#int,float,double,arraylist,map,boolean
+
+- name: data type
+  hosts: local host
+  vars:
+    Course: Devops with AWS #string
+    Tools: #if it start with hi-fun its list
+    - Linux
+    - Shell
+    - Ansible
+    Experience: #map or dictionary
+      Devops: 3 #number
+      AWS: 2
+      Docker: 1
+    RealProject: true #boolean
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+    mag: "Course: {{Course}}, Tools covered: {{Tools}}, Experience is {{Experience}},
+    is real project: {{Real Project}}"
+
+

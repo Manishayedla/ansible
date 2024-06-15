@@ -1,26 +1,30 @@
-#if the same value is store in multiple places then which one it wil consider lets see
+#if the same value is given in multiple places for one var then which one it wil consider lets see.
+
 
 - name: variable preference
   hosts: localhost
-  vars:
-    WISHES: "Morning from PLAY variable"
-  vars_files:
+  #vars: #playlevel #5
+    #WISHES: "Morning from PLAY variable"
+  vars_files: #3
   - vars.yaml
-  vars_prompt:
-  - name: WISHES
-    prompt: Please enter Wishes
-    private: false
+  #vars_prompt: #4
+  #- name: WISHES
+    #prompt: Please enter Wishes
+    #private: false
   tasks:
   - name: check preference
-    vars:
-      WISHES: "Morning from TASK variable"
+    #vars:
+      #WISHES: "Morning from TASK variable" #2
     ansible.builtin.debug:
       msg: "Hello, Good {{WISHES}}"
 
-# 1. arguments
+
+
+#looks like its taking from the one we entered on terminal
+# 1. arguments - terminal (the value entered in args is given 1st preference)
 # 2. Task level
 # 3. variable files
 # 4. Prompt
 # 5. Play level
 # 6. inventory
-# 7. role level
+# 7. role level (will be discussed later)
