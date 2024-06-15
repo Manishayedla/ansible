@@ -16,4 +16,4 @@
   
   - name: print information #here is going to print the info that's not over ridden
     ansible.builtin.debug:
-      msg: "Hi, My name is {{Name}}. I'm learning {{Course}}, Duration is {{Duration}}"  #{{}} to assign variable in ansible
+      msg: "Hi, My name is {{Name}}. I'm learning {{Course}}, Duration is {{Duration}}"  #{{}} to assign variable in ansiblee
