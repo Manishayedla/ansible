@@ -7,7 +7,6 @@
   - name: PASSWORD
     prompt: Please enter your Password
     private: true #if private is true it will not be seen/visible on terminal
-  - vars.yaml
   tasks:
   - name: print override information #prints the info that over ridden
     ansible.builtin.debug:
