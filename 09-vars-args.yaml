@@ -1,0 +1,10 @@
+- name: variables from arguments
+hosts: localhost
+tasks:
+- name: get from args
+  ansible.builtin.debug:
+    msg: "hello {{PERSON}}, Good {{WISHES}}"
+
+    #if you wish not to declare the PERSON AND WISHES in the playbooks it is still fine
+
+  #you use -e and give details on terminal itself
