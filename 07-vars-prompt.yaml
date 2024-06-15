@@ -1,0 +1,14 @@
+- name: variables from files
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your Username
+    private: false #if private is false it will be seen while typing
+  - name: PASSWORD
+    prompt: Please enter your Password
+    private: true #if private is true it will not be seen/visible on terminal
+  - vars.yaml
+  tasks:
+  - name: print override information #prints the info that over ridden
+    ansible.builtin.debug:
+     msg: "Hi, Username: {{USERNAME}}. Password is: {{PASSWORD}}""
