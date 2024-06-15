@@ -3,7 +3,7 @@
 - name: variables from files
   hosts: localhost
   vars_files:
-  -vars.yaml
+  - vars.yaml
   tasks:
    - name: print override information #prints the info that over ridden
     vars: #Task level variable #inheritance and overriding 
