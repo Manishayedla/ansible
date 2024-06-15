@@ -1,0 +1,10 @@
+- name: variables from files
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print information 
+    ansible.builtin.debug:
+     msg: "Hi, My name is {{Name}}. I'm learning {{Course}}, Duration is {{Duration}}"  
+
+     #need not mention inventory anywhere. it will go find it by itself.

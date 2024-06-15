@@ -1,3 +1,5 @@
+#if you do not wish to create an other file for USERNAME N PASSWORD HERE. 
+#here we have used prompt to enter the details and private.
 - name: variables from files
   hosts: localhost
   vars_prompt:
