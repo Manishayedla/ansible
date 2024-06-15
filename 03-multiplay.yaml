@@ -1,13 +1,13 @@
 - name: PLAY-1
   hosts: localhost
-  tasks"
+  tasks:
     - name: PLAY-1 AND TASK-1
       ansible.builtin.debug: #debug module prints message, just like echo
       msg: "Hello I am from PLAY-1 AND TASK-1"
 
 - name: PLAY-2
   hosts: localhost
-  tasks"
+  tasks:
     - name: PLAY-2 AND TASK-2
       ansible.builtin.debug: #debug prints message
       msg: "Hello I am from PLAY-2 AND TASK-2"
