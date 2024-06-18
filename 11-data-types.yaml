@@ -1,4 +1,5 @@
 #int,float,double,arraylist,map,boolean
+#In ansible : number, string,list, map
 
 - name: data types
   hosts: localhost
