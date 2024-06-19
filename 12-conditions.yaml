@@ -1,4 +1,4 @@
-- name: Condition
+- name: condition
   hosts: web
   become: yes #root access
   tasks:
